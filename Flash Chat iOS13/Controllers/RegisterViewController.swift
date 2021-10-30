@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Toaster
 
 class RegisterViewController: UIViewController {
 
@@ -18,7 +19,10 @@ class RegisterViewController: UIViewController {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print(e.localizedDescription)
+                    ToastView.appearance().backgroundColor = .red
+                    ToastView.appearance().textColor = .white
+                    ToastView.appearance().font = .boldSystemFont(ofSize: 14)
+                    Toast(text: e.localizedDescription, delay: 0, duration: Delay.long).show()
                 }else {
                     self.emailTextfield.text = ""
                     self.passwordTextfield.text = ""
