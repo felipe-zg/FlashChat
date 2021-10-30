@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Toaster
 
 class LoginViewController: UIViewController {
 
@@ -19,7 +20,10 @@ class LoginViewController: UIViewController {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print(e)
+                    ToastView.appearance().backgroundColor = .red
+                    ToastView.appearance().textColor = .white
+                    ToastView.appearance().font = .boldSystemFont(ofSize: 14)
+                    Toast(text: e.localizedDescription, delay: 0, duration: Delay.long).show()
                 }else {
                     self.emailTextfield.text = ""
                     self.passwordTextfield.text = ""
