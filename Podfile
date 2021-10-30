@@ -4,7 +4,8 @@ target 'Flash Chat iOS13' do
   use_frameworks!
 
   # Pods for Flash Chat iOS13
-  pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'CLTypingLabel', '~> 0.4.0' #Text animations
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Toaster' #Toaster to show messages to users
 end
