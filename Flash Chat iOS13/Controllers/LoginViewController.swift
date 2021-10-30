@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
                 }else {
                     self.emailTextfield.text = ""
                     self.passwordTextfield.text = ""
-                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                    self.performSegue(withIdentifier: K.Segues.loginSegue, sender: self)
                 }
             }
         }
