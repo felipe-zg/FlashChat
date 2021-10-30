@@ -2,7 +2,7 @@
 Bytecoin/Env.swift
 
 #FIREBASE
-GoogleService-info.list
+GoogleService-info.plist
 
 #DS_STORE
 .DS_Store
