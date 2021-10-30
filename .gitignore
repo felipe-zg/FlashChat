@@ -1,6 +1,9 @@
 #Environment variables
 Bytecoin/Env.swift
 
+#FIREBASE
+GoogleService-info.list
+
 #DS_STORE
 .DS_Store
 
