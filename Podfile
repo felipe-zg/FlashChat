@@ -8,4 +8,5 @@ target 'Flash Chat iOS13' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Toaster' #Toaster to show messages to users
+  pod 'IQKeyboardManagerSwift' #Keyboard manager to avoid covering the input
 end
