@@ -27,7 +27,7 @@ class ChatViewController: UIViewController {
     }
     
     func loadAllMessages() {
-        db.collection(K.FStore.collectionName).addSnapshotListener { querySnapshop, error in
+        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { querySnapshop, error in
             if let e = error {
                 print("There was an issue retrieving the data, \(e)")
             }else {
